@@ -1,20 +1,100 @@
 :root {
     --primary-bg: #E2E8F4;
+    --accent: #FC815F;
+    --body-text: #333333;
+    --nav-bg: #FAF9F6;
     --nav-text: #13315C;
+    --nav-shadow: #9DD7EC1A;
+
+    --body-title-font: 'Roboto', Arial, sans-serif;
+
+    --font-default: 16px;
 }
 
 /* ****************************************
    Global Styles
    **************************************** */
-   * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: var(--body-title-font);
+    font-size: var(--font-default);
+    background-image: url(/betina-qa-portfolio/assets/images/background-hero.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: var(--body-text);
+    line-height: 1.6;
+}
+
+/* ****************************************
+   Top Navigation
+   **************************************** */
+.top-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    box-shadow: 2px 4px 0 var(--nav-shadow);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--nav-text);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.logo a {
+    display: inline-flex;
+    align-items: end;
+    white-space: nowrap;
+}
+
+.betina-logo {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.3rem 0 0.1rem;
+}
+
 /* ****************************************
    Footer Section
    **************************************** */
-   footer {
+footer {
     text-align: center;
     padding: 1rem;
     background-color: var(--primary-bg);
