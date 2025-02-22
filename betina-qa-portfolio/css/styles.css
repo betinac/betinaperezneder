@@ -2,6 +2,7 @@
     --primary-bg: #E2E8F4;
     --accent: #FC815F;
     --body-text: #333333;
+    --bg-image-shadow: #13A1D01A;
     --nav-bg: #FAF9F6;
     --nav-text: #13315C;
     --nav-shadow: #9DD7EC1A;
@@ -96,6 +97,26 @@ body {
    **************************************** */
 .hamburger {
     display: none;
+}
+
+/* ****************************************
+   Fixed background image
+   **************************************** */
+.background-img {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    box-shadow: 2px 4px 0 var(--bg-image-shadow);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.background-img img {
+    display: table;
+    position: relative;
+    margin: auto;
 }
 
 /* ****************************************
