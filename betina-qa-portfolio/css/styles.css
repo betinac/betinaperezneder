@@ -33,6 +33,17 @@
     --contact-bg: #0000001A;
     --contact-header-p: #666666;
     --contact-form-group: #CCCCCC;
+
+
+    --card-bg: white;
+    --card-shadow: #0000001A;
+    --card-top-bg: #1155B21A;
+    --card-top-text: #1155B2;
+    --card-content-bg: #1155B21A;
+    --card-bottom-av-name: #13315C;
+    --card-bottom-av-title: #134074;
+    --card-bottom-av-date: #1F6BC1;
+    
 }
 
 /* ****************************************
@@ -282,6 +293,121 @@ body {
     white-space: nowrap;
     margin: auto;
     margin-top: 3rem;
+}
+
+/* ****************************************
+   LinkedIn recommendations Section
+   **************************************** */
+.linkedin-logo {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 0.8rem 0 0.1rem;
+}
+
+.linkedin-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    overflow-x: auto;
+    gap: 0;
+    padding: 1.5rem;
+    margin: 1rem 1rem;
+}
+
+.linkedin-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    margin: 10px;
+    transition: transform 0.2s;
+    width: 280px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.linkedin-card:hover {
+    transform: scale(1.05);
+}
+
+.linkedin-card-top {
+    padding: 0.6rem;
+}
+
+.linkedin-card-top span {
+    background-color: var(--card-top-bg);
+    color: var(--card-top-text);
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.linkedin-card-content {
+    padding: 20px;
+    background-color: var(--card-content-bg);
+}
+
+.linkedin-truncated-content {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: var(-webkit-line-clamp);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    max-height: 7.5em;
+    margin-bottom: 1rem;
+}
+
+.linkedin-full-content {
+    display: none;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.linkedin-read-more,
+.linkedin-hide {
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.linkedin-read-more:hover,
+.linkedin-hide:hover {
+    text-decoration: underline;
+}
+
+.linkedin-card-bottom {
+    padding: 1rem;
+    display: flex;
+}
+
+.linkedin-avatar-logo {
+    margin-right: 0.6rem;
+}
+
+.linkedin-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.linkedin-avatar-icon {
+    width: 10px;
+    height: 10px;
+}
+
+.linkedin-name {
+    color: var(--card-bottom-av-name);
+    font-weight: bold;
+}
+
+.linkedin-title {
+    color: var(--card-bottom-av-title);
+    font-size: 0.9em;
+}
+
+.linkedin-date {
+    color: var(--card-bottom-av-date);
+    font-size: 0.8em;
 }
 
 /* ****************************************
