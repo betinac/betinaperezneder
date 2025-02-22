@@ -92,6 +92,13 @@ body {
 }
 
 /* ****************************************
+   Hamburger Menu for Mobile
+   **************************************** */
+.hamburger {
+    display: none;
+}
+
+/* ****************************************
    Footer Section
    **************************************** */
 footer {
@@ -99,4 +106,47 @@ footer {
     padding: 1rem;
     background-color: var(--primary-bg);
     color: var(--nav-text);
+}
+
+/* ****************************************
+   Responsive configuration
+   **************************************** */
+@media screen and (max-width: 880px) {
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--nav-bg);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem 0;
+        gap: 1rem;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: var(--nav-text);
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .hamburger:hover {
+        color: var(--accent);
+    }
 }
