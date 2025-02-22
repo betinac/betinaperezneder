@@ -24,6 +24,15 @@
 
     --social-bg: #9FB5E3;
     --social-text: #13315C;
+
+    --cform-bg: #E2E8F4;
+    --cform-error: #9D0000;
+    --cform-confirmation: #065906;
+    --cform-title: #13315C;
+    --cform-subtitle: #13315C;
+    --contact-bg: #0000001A;
+    --contact-header-p: #666666;
+    --contact-form-group: #CCCCCC;
 }
 
 /* ****************************************
@@ -300,6 +309,107 @@ body {
 }
 
 /* ****************************************
+   Contact Section
+   **************************************** */
+.contact-section {
+    scroll-margin-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    padding: 3rem 1rem;
+    background-color: var(--cform-bg);
+    box-shadow: 0 2px 8px var(--contact-bg);
+    border-radius: 20px;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--cform-title);
+}
+
+.contact-subheadline {
+    font-size: 1.1rem;
+    color: var(--cform-subtitle);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cf-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    flex: 1 1 100%;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid var(--contact-form-group);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.checkboxes {
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+.checkboxes .form-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkboxes .form-group label {
+    margin: 0;
+    font-weight: 400;
+}
+
+.cf-form-row .cta-get-in-touch {
+    width: 40%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+input.error,
+textarea.error {
+    border: 1.5px solid var(--cform-error);
+}
+
+.error-message {
+    color: var(--cform-error);
+}
+
+/* ****************************************
    Social Section
    **************************************** */
 .social-section {
@@ -463,5 +573,11 @@ footer {
 
     .hamburger:hover {
         color: var(--accent);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .contact-intro h1 .contact-break-last {
+        display: inline-block;
     }
 }
