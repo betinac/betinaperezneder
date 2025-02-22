@@ -21,6 +21,9 @@
     --cta-gradient-accent: #E9A112;
     --cta-text: #FFFFFF;
     --cta-bg: #FC815F;
+
+    --social-bg: #9FB5E3;
+    --social-text: #13315C;
 }
 
 /* ****************************************
@@ -295,6 +298,120 @@ body {
     font-family: var(--body-title-font);
     font-size: 16px;
 }
+
+/* ****************************************
+   Social Section
+   **************************************** */
+.social-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    background-color: var(--social-bg);
+}
+
+.social-container {
+    padding: 1rem;
+}
+
+.social-left {
+    text-align: left;
+    color: var(--social-text);
+}
+
+.social-left h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 0.5rem;
+}
+
+.email-copy {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+}
+
+.copy-email {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    padding: 0;
+    color: var(--social-text);
+}
+
+.copy-email:hover {
+    color: var(--accent);
+}
+
+.copy-feedback {
+    position: absolute;
+    left: 320px;
+    margin-left: 0.5rem;
+    opacity: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, var(--cta-gradient-accent), transparent) var(--cta-bg);
+    color: var(--cta-text);
+    padding: 0.8rem;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
+    gap: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-image {
+    max-width: 60px;
+    flex: 1 1 100px;
+    padding: 0.3rem;
+    display: inline-flex;
+}
+
+.social-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-overlay:hover {
+    transform: scale(1.1);
+}
+
+.social-right {
+    text-align: right;
+}
+
+.certification-logo {
+    color: var(--nav-text);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.certification-logo h1 {
+    font-size: clamp(1rem, 3vw, 2rem);
+    text-wrap-mode: nowrap;
+}
+
+.certification-logo img {
+    max-width: 100%;
+    width: 100px;
+}
+
 
 /* ****************************************
    Footer Section
