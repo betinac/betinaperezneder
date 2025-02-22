@@ -409,6 +409,18 @@ textarea.error {
     color: var(--cform-error);
 }
 
+.summary-message {
+    font-size: 1.1rem;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 0.25rem;
+}
+
+.confirmation-message {
+    color: var(--cform-confirmation);
+}
+
+
 /* ****************************************
    Social Section
    **************************************** */
