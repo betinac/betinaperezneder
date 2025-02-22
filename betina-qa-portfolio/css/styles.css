@@ -434,6 +434,47 @@ body {
     font-size: 16px;
 }
 
+/* *********************************************************************
+   Services, 1:1, Hire Betina, LinkedIn Recommendations Title Sections
+   ********************************************************************* */
+
+.linkedin-rec-section {
+    width: 100%;
+    padding-bottom: 3rem;
+}
+
+.linkedin-rec-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.linkedin-rec-text {
+    flex: 1 1 500px;
+    padding: 1.8rem;
+}
+
+.linkedin-rec-text h1 {
+    display: flex;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.linkedin-rec-text h1::before,
+h1::after {
+    content: "";
+    flex: 1;
+    border-top: 2px solid var(--accent);
+    margin: 0 10px;
+}
+
+
 /* ****************************************
    Contact Section
    **************************************** */
