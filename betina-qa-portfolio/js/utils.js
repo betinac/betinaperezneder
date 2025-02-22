@@ -88,4 +88,26 @@ function showTooltips() {
     });
   }
   document.addEventListener('DOMContentLoaded', showTooltips)
+
+/* Show a preview of my resume in an iframe */
+function previewResume () {
+    const modal = document.getElementById("previewModal");
+    const previewBtn = document.getElementById("previewBtn");
+    const closeModal = document.getElementById("closeModal");
+  
+    previewBtn.addEventListener("click", () => {
+      modal.style.display = "block";
+    });
+  
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', previewResume)
   
