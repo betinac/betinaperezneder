@@ -1,13 +1,19 @@
 :root {
     --primary-bg: #E2E8F4;
     --accent: #FC815F;
+    --text-color: #13315C;
+    --secondary-accent: #4C7FE6;
     --body-text: #333333;
     --bg-image-shadow: #13A1D01A;
     --nav-bg: #FAF9F6;
     --nav-text: #13315C;
     --nav-shadow: #9DD7EC1A;
+    --underline-stroke: #FC815F; 
 
     --body-title-font: 'Roboto', Arial, sans-serif;
+    --sub-title-font: 'Playfair', Arial, sans-serif;
+    --sec-sub-title-font: 'Lexend', Arial, sans-serif;
+    --title-font: 'Island Moments', Arial, sans-serif;
 
     --font-default: 16px;
 }
@@ -118,6 +124,116 @@ body {
     position: relative;
     margin: auto;
 }
+
+/* ****************************************
+   Header Section
+   **************************************** */
+.nav-spacer {
+    height: 70px; 
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: calc(70px + 1.5rem);
+}
+
+.hero-text {
+    text-align: center;
+    width: 100%;
+}
+
+.hero-text h1 .part-roboto {
+    font-family: var(--body-title-font);
+    font-style: italic;
+    font-weight: lighter;
+    font-size: clamp(1.8rem, 1.5rem + 1.1vw, 3rem);
+    color: var(--text-color);
+}
+
+.hero-text h1 .part-island {
+    font-family: var(--title-font);
+    font-size: clamp(12rem, 6.6rem + 12vw, 18rem);
+    font-style: normal;
+    font-weight: lighter;
+    line-height: 1rem;
+    color: var(--text-color);
+}
+
+.hero-text .hero-text-subtitle {
+    font-family: var(--sub-title-font);
+    font-size: clamp(2rem, 1.5692rem + 2.238vw, 3.5rem);
+    color: var(--secondary-accent);
+    font-weight: bold;
+    line-height: 10rem;
+}
+
+.hero-text p.title {
+    font-family: var(--sec-sub-title-font);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-style: normal;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0 2rem;
+}
+
+.hero-text p.title .title-break-last {
+    display: inline;
+}
+
+.hero-text p.sub-title {
+    font-family: var(--body-title-font);
+    font-size: clamp(1.1rem, 2.7vw, 1.5rem);
+    font-style: normal;
+    color: var(--text-color);
+    font-weight: 400;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    padding-top: 1rem;
+}
+
+.quality-highlight {
+    color: var(--accent);
+    position: relative;
+    z-index: 1;
+}
+
+.underline-animation {
+    text-decoration: none;
+    position: relative;
+    white-space: nowrap;
+}
+
+.underline-animation svg {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.underline-animation .stroke {
+    stroke: var(--underline-stroke);
+    stroke-width: .09em;
+    stroke-dasharray: 822;
+    stroke-dashoffset: 822;
+    animation: underlineAnimation 1.8s 1s linear forwards;
+}
+
+@keyframes underlineAnimation {
+    from {
+        stroke-dashoffset: 822;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
 
 /* ****************************************
    Footer Section
