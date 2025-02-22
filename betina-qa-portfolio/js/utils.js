@@ -48,3 +48,44 @@ function copyToClipboard() {
     });
 }
 document.addEventListener('DOMContentLoaded', copyToClipboard )
+
+/* Show tooltips when hovering over the skill icons in the Hire Me section */
+function showTooltips() {
+
+    const tooltip = document.getElementById('tooltip');
+    const icons = document.querySelectorAll('.services-icon');
+  
+    icons.forEach(icon => {
+      icon.addEventListener('mouseenter', function () {
+        const text = this.getAttribute('data-tooltip');
+        tooltip.textContent = text;
+        tooltip.style.opacity = '1';
+  
+        /* Calculate position: display tooltip above the icon */
+        const rect = this.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+  
+        let top = rect.top - tooltipRect.height - 8;
+        let left = rect.left + (rect.width - tooltipRect.width) / 2;
+  
+        /* Adjust if tooltip goes off-screen */
+        if (top < 0) {
+          top = rect.bottom + 8;
+        }
+        if (left < 0) {
+          left = 8;
+        } else if (left + tooltipRect.width > window.innerWidth) {
+          left = window.innerWidth - tooltipRect.width - 8;
+        }
+  
+        tooltip.style.top = `${top + window.scrollY}px`;
+        tooltip.style.left = `${left + window.scrollX}px`;
+      });
+  
+      icon.addEventListener('mouseleave', () => {
+        tooltip.style.opacity = '0';
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', showTooltips)
+  
