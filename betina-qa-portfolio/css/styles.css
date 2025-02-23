@@ -1201,6 +1201,89 @@ footer {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding: 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .hero-text h1 .part-island {
+        font-size: clamp(9.5rem, 16vw, 10rem);
+    }
+
+    .hero-text p.title .title-break-last {
+        display: block;
+    }
+
+    .service-container,
+    .service-container.reverse {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .service-container.reverse .service-text {
+        text-align: left;
+    }
+
+    .service-text h2 {
+        text-align: center;
+    }
+
+    .service-icon-circle {
+        width: 72px;
+        height: 72px;
+        font-size: 32px;
+        align-self: center;
+    }
+
+    .cf-form-row {
+        flex-direction: column;
+    }
+
+    .linkedin-card {
+        flex: 1 1 calc(50% - 40px);
+    }
+
+    .services-text h1,
+    .hire-me-text h1,
+    .linkedin-rec-text h1 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+
+    .services-icon-container {
+        gap: 2rem;
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .services-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .preview-modal iframe {
+          height: 400px;
+    }
+
+    .linkedin-logo {
+        width: 7rem;
+        height: 7rem;
+        margin: 0 0.8rem 0 0.1rem;
+    }
+
+    .certification-logo img {
+        max-width: 100%;
+        width: 80px;
+    }
+}
+
 @media screen and (max-width: 568px) {
     .linkedin-card {
         flex: 1 1 calc(100% - 40px);
