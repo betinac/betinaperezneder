@@ -1254,3 +1254,13 @@ footer {
         display: inline-block;
     }
 }
+
+@media screen and (max-width: 530px) {
+    .copy-feedback {
+        left: 200px;
+    }
+
+    .hero-text .hero-text-subtitle {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+}
