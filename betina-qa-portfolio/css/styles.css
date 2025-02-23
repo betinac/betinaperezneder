@@ -68,7 +68,7 @@ html {
 body {
     font-family: var(--body-title-font);
     font-size: var(--font-default);
-    background-image: url(betina-qa-portfolio/assets/images/background-hero.svg);
+    background-image: url(../../assets/images/background-hero.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     color: var(--body-text);
