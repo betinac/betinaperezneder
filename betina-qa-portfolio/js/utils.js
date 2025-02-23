@@ -87,7 +87,7 @@ function showTooltips() {
       });
     });
   }
-  document.addEventListener('DOMContentLoaded', showTooltips)
+document.addEventListener('DOMContentLoaded', showTooltips)
 
 /* Show a preview of my resume in an iframe */
 function previewResume () {
@@ -109,5 +109,5 @@ function previewResume () {
       }
     });
   }
-  document.addEventListener('DOMContentLoaded', previewResume)
+document.addEventListener('DOMContentLoaded', previewResume)
   
