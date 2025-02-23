@@ -1271,3 +1271,11 @@ footer {
         height: 28px;
     }
 }
+
+@media (max-width: 350px) {
+    .services-step {
+        flex: 1 1 100%;
+        padding: 0.5px;
+        margin: 0 0;
+    }
+}
