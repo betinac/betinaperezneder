@@ -10,22 +10,17 @@
     --nav-text: #13315C;
     --nav-shadow: #9DD7EC1A;
     --underline-stroke: #FC815F; 
-
     --body-title-font: 'Roboto', Arial, sans-serif;
     --sub-title-font: 'Playfair', Arial, sans-serif;
     --sec-sub-title-font: 'Lexend', Arial, sans-serif;
     --title-font: 'Island Moments', Arial, sans-serif;
-
     --font-default: 16px;
-
     --cta-gradient-accent: #E9A112;
     --cta-text: #FFFFFF;
     --cta-bg: #FC815F;
     --cta-modal: #84838380;
-
     --social-bg: #9FB5E3;
     --social-text: #13315C;
-
     --cform-bg: #E2E8F4;
     --cform-error: #9D0000;
     --cform-confirmation: #065906;
@@ -34,8 +29,6 @@
     --contact-bg: #0000001A;
     --contact-header-p: #666666;
     --contact-form-group: #CCCCCC;
-
-
     --card-bg: white;
     --card-shadow: #0000001A;
     --card-top-bg: #1155B21A;
@@ -44,17 +37,19 @@
     --card-bottom-av-name: #13315C;
     --card-bottom-av-title: #134074;
     --card-bottom-av-date: #1F6BC1;
-    
     --card-container-bg: #F4F4F4;
-
     --flip-card-steps-text: #333333;
+    --flip-card-services: #E2E8F4;
+    --flip-card-shadow: #00000033;
+    --flip-card-text: #555555;
+    --flip-card-steps: #0000001A;
+    --flip-card-steps-icon: white;
     --tooltip: white;
     --timeline-bg: #FF9F55;
     --timeline-bb: white;
     --work-content: #F9F0EA;
     --work-position: #13315C;
     --work-years: #151515;
-
 }
 
 /* ****************************************
@@ -309,12 +304,13 @@ body {
 /* *********************************************************************
    Services, 1:1, Hire Betina, LinkedIn Recommendations Title Sections
    ********************************************************************* */
-
+.services-section,
 .linkedin-rec-section {
     width: 100%;
     padding-bottom: 3rem;
 }
 
+.services-content,
 .hire-me-content,
 .linkedin-rec-content {
     max-width: 1200px;
@@ -325,12 +321,14 @@ body {
     flex-wrap: wrap;
 }
 
+.services-text,
 .hire-me-text,
 .linkedin-rec-text {
     flex: 1 1 500px;
     padding: 1.8rem;
 }
 
+.services-text h1,
 .hire-me-text h1,
 .linkedin-rec-text h1 {
     display: flex;
@@ -341,6 +339,8 @@ body {
     text-align: center;
 }
 
+.services-text h1::before,
+h1::after,
 .hire-me-text h1::before,
 h1::after,
 .linkedin-rec-text h1::before,
@@ -351,13 +351,214 @@ h1::after {
     margin: 0 10px;
 }
 
+.services-text h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    margin-bottom: 1.5rem;
+    color: var(--secondary-accent);
+}
+
+.services-text p,
 .hire-me-text p {
     font-size: clamp(1rem, 3.5vw, 1.5rem);
 }
 
 /* ****************************************
+   Consulting Text Section
+   **************************************** */
+.services-text {
+    max-width: 1200px;
+    margin: 0 0 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.service-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-container:not(.reverse) .service-text {
+    text-align: left;
+}
+
+.service-container.reverse .service-text {
+    text-align: right;
+}
+
+.service-icon-circle {
+    width: 90px;
+    height: 90px;
+    background-color: var(--primary-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cform-subtitle);
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.service-container .services-text p {
+    padding: 5rem;
+}
+
+.services-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services-flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 450px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.services-flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.services-flip-card-inner.flipped,
+.services-flip-card:hover .services-flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.services-flip-card-front,
+.services-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    background-color: var(--flip-card-services);
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--flip-card-shadow);
+}
+
+.services-flip-card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.services-flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.services-flip-card-front h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.services-flip-card-back h3 {
+    font-size: 1.5rem;
+    color: var(--card-top-text);
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+.services-flip-card-back .services-icon-container {
+    margin: 0;
+}
+
+.services-flip-card-back .services-icon-container .wcag img {
+    width: auto;
+    height: 44px;
+    background-blend-mode: lighten;
+}
+
+.services-flip-card-front p {
+    font-size: 1.5rem;
+    color: var(--flip-card-text);
+}
+
+.services-steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.services-step {
+    background: var(--primary-bg);
+    border-radius: 8px;
+    padding: 5px;
+    flex: 1 1 calc(45% - 15px);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 1rem 0;
+}
+
+.services-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px var( --flip-card-steps);
+}
+
+.services-step-icon {
+    background: var(--secondary-accent);
+    color: var(--flip-card-steps-icon);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+.services-step-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--flip-card-steps-text);
+}
+
+.services-icon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 6px;
+}
+
+.services-icon-item {
+    display: flex;
+    align-items: center;
+}
+
+.services-icon-item img {
+    width: 38px;
+    height: 38px;
+    margin-right: 10px;
+}
+
+.services-icon-item span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* ****************************************
    Hire Me Section
    **************************************** */
+.services-section, 
 .hire-me-section {
     scroll-margin-top: 70px;
 }
@@ -830,7 +1031,6 @@ textarea.error {
     color: var(--cform-confirmation);
 }
 
-
 /* ****************************************
    Social Section
    **************************************** */
@@ -943,7 +1143,6 @@ textarea.error {
     max-width: 100%;
     width: 100px;
 }
-
 
 /* ****************************************
    Footer Section
