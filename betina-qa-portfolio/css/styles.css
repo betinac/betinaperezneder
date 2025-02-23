@@ -1264,3 +1264,10 @@ footer {
         font-size: clamp(2.5rem, 5vw, 4rem);
     }
 }
+
+@media (max-width: 480px) {
+    .services-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
