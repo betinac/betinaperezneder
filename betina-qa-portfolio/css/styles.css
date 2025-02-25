@@ -99,7 +99,7 @@ body {
 .logo a {
     text-decoration: none;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 500;
     color: var(--nav-text);
 }
 
@@ -116,7 +116,6 @@ body {
 .nav-links a {
     text-decoration: none;
     color: var(--nav-text);
-    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -214,7 +213,7 @@ body {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-style: normal;
     color: var(--text-color);
-    font-weight: 600;
+    font-weight: bold;
     padding: 0 2rem;
 }
 
@@ -227,7 +226,6 @@ body {
     font-size: clamp(1.1rem, 2.7vw, 1.5rem);
     font-style: normal;
     color: var(--text-color);
-    font-weight: 400;
     max-width: 80%;
     margin: 0 auto;
     padding: 0 1rem;
@@ -280,7 +278,6 @@ body {
     color: var(--cta-text);
     border-radius: 25px;
     border: none;
-    font-weight: bold;
     font-size: clamp(1rem, 3vw, 1.2rem);
     transition: background-color 1s ease;
     text-decoration: none;
@@ -533,7 +530,6 @@ h1::after {
 
 .services-step-text {
     font-size: 1rem;
-    font-weight: bold;
     color: var(--flip-card-steps-text);
 }
 
@@ -556,7 +552,6 @@ h1::after {
 
 .services-icon-item span {
     font-size: 1rem;
-    font-weight: 600;
 }
 
 /* ****************************************
@@ -644,7 +639,6 @@ h1::after {
     top: 10px;
     right: 15px;
     font-size: 28px;
-    font-weight: bold;
     cursor: pointer;
 }
 
@@ -666,7 +660,6 @@ iframe {
 .hire-me-subtitle {
     font-size: clamp(1rem, 3.5vw, 2rem);
     margin-bottom: 2rem;
-    font-weight: bold;
 }
 
 .services-icon-container {
@@ -678,7 +671,7 @@ iframe {
 }
 
 .services-icon-container .services-icon {
-    font-size: 48px;
+    font-size: 44px;
     cursor: pointer;
     transition: transform 0.2s;
     position: relative;
@@ -689,8 +682,8 @@ iframe {
 }
 
 .services-icon-container .services-icon img {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
 }
 
 .tooltip {
@@ -886,7 +879,7 @@ iframe {
 
 .linkedin-name {
     color: var(--card-bottom-av-name);
-    font-weight: bold;
+    font-weight:400;
 }
 
 .linkedin-title {
@@ -908,7 +901,6 @@ iframe {
     color: var(--cta-text);
     padding: 0.5rem 1.5rem;
     border-radius: 25px;
-    font-weight: bold;
     font-size: 1rem;
     text-decoration: none;
     white-space: nowrap;
@@ -976,7 +968,6 @@ iframe {
 }
 
 .form-group label {
-    font-weight: 500;
     margin-bottom: 0.3rem;
 }
 
@@ -1006,7 +997,6 @@ iframe {
 
 .checkboxes .form-group label {
     margin: 0;
-    font-weight: 400;
 }
 
 .cf-form-row .cta-get-in-touch {
@@ -1096,7 +1086,6 @@ textarea.error {
     text-decoration: none;
     border-radius: 5px;
     border: none;
-    font-weight: bold;
     font-size: 0.9rem;
     transition: opacity 0.3s ease;
     gap: 0.5rem;
@@ -1199,6 +1188,10 @@ footer {
     .hamburger:hover {
         color: var(--accent);
     }
+    .hire-me-skills .services-icon {
+        padding-bottom: 50px;
+        padding-right: 30px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1257,15 +1250,15 @@ footer {
         font-size: clamp(2rem, 5vw, 2.5rem);
     }
 
-    .services-icon-container {
-        gap: 2rem;
-        padding: 1rem;
-        margin-bottom: 2rem;
+    .services-icon:not(.wcag) {
+        width: 36px;
+        height: auto;
     }
 
-    .services-icon {
-        width: 36px;
-        height: 36px;
+    .services-flip-card-back .services-icon-container .wcag  img{
+        width: auto;
+        height: 40px;
+        background-blend-mode: lighten;
     }
 
     .preview-modal iframe {
@@ -1284,7 +1277,17 @@ footer {
     }
 }
 
+@media screen and (max-height: 674px) {
+    .background-img img {
+      display: none;
+    }
+  }
+
 @media screen and (max-width: 568px) {
+    .nav-spacer {
+        height: 0px; 
+    }
+
     .linkedin-card {
         flex: 1 1 calc(100% - 40px);
     }
@@ -1339,7 +1342,7 @@ footer {
 
 @media screen and (max-width: 530px) {
     .copy-feedback {
-        left: 200px;
+        left: 100px;
     }
 
     .hero-text .hero-text-subtitle {
@@ -1347,17 +1350,145 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    .services-icon {
+@media screen and (max-width: 480px) {
+    .background-img{
+        display: none;
+    }
+
+    .hero-text h1{
+        line-height: 5rem;
+    }
+
+    .hero-text .hero-text-subtitle {
+        font-size: 2rem;
+        line-height: 6rem;
+    }
+    
+    .hero-text p.title {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .services-text h1,
+    .hire-me-text h1,
+    .linkedin-rec-text h1 {
+        font-size: clamp(1.7rem, 5vw, 2rem);
+    }
+
+    .services-flip-card-back .services-icon:not(.wcag) {
         width: 28px;
         height: 28px;
     }
+
+    .hire-me-skills .services-icon {
+        width: 28px;
+        height: 28px;
+        padding-bottom: 50px;
+        padding-right: 30px;
+    }
+
+    .services-flip-card-back h3 {
+        font-size: 1.2rem;
+        padding-top: 0.5rem;
+        margin-top: 1.2rem;
+    }
+
+    .services-flip-card-back .services-icon-container{
+        padding: 0.9rem;
+        line-height: 1.1rem;
+    }
+
+    .hire-me-skills .services-icon-container{
+        padding: 0.1rem;
+        line-height: 3rem;
+
+    }
+
+
+    .services-step {
+        flex: 0 0 100%;
+        margin: 0;
+    }
+
+    .services-step-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .contact-intro h1 {
+        font-size: clamp(1.7rem, 2vw, 2rem);
+        margin-bottom: 0;
+    }    
+
+    .linkedin-truncated-content {
+        -webkit-line-clamp: 4;
+        line-clamp: var(-webkit-line-clamp);
+    }   
 }
 
-@media (max-width: 350px) {
+@media screen and (max-height: 384px) {   
+    .services-flip-card-back h3 {
+        font-size: 1.2rem;
+        padding-top: 0.5rem;
+        margin-top: 1.2rem;
+    }
+    
+    .services-icon-container{
+        padding-top: 0.5rem;
+        padding-bottom: 1.4rem;
+        padding-right: 0.5rem;
+        line-height: 0.5rem;
+    }
+
+    .services-icon:not(.wcag) {
+        width: 26px;
+        height: 26px;
+    }
+
+    .services-flip-card-back .services-icon-container .wcag  img{
+        width: auto;
+        height: 38px;
+        background-blend-mode: lighten;
+    }
+
     .services-step {
         flex: 1 1 100%;
         padding: 0.5px;
         margin: 0 0;
     }
+
+    .preview-modal iframe {
+        height: 230px;
+    }
+
+    .services-text h1,
+    .hire-me-text h1,
+    .linkedin-rec-text h1 {
+        font-size: clamp(1.7rem, 5vw, 2rem);
+    }
+
+    .linkedin-logo {
+        width: 7rem;
+        height: 7rem;
+        margin: 0 0.4rem 0 0.1rem;
+    }
+  
+    .linkedin-truncated-content {
+        -webkit-line-clamp: 4;
+        line-clamp: var(-webkit-line-clamp);
+    }
+
+    .linkedin-card {
+        margin-bottom: 50px;
+    }
+    
+    .linkedin-rec-section {
+        padding-bottom: 1rem;
+    }
+
+    .contact-intro h1 {
+        font-size: clamp(1.7rem, 2vw, 2rem);
+        margin-bottom: 0;
+    } 
 }
