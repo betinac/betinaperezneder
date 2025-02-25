@@ -102,7 +102,7 @@ function formSubmission() {
                 .then(result => {
                     loadingMessageEl.style.display = 'none';
                     submitButton.disabled = false;
-                    formMessageEl.textContent = 'Thank you! Your message has been submitted successfully.';
+                    formMessageEl.textContent = 'Thank you! Your message has been sent successfully.';
                     formMessageEl.className = 'summary-message confirmation-message';
                     form.reset();
                     formMessageEl.focus();
@@ -110,13 +110,13 @@ function formSubmission() {
                 .catch(error => {
                     loadingMessageEl.style.display = 'none';
                     submitButton.disabled = false;
-                    formMessageEl.textContent = 'There was an error submitting the form. Please try again later.';
+                    formMessageEl.textContent = 'There was an error when sending your message. Please try again later.';
                     formMessageEl.className = 'summary-message error-message';
                 });
         } else {
             loadingMessageEl.style.display = 'none';
             submitButton.disabled = false;
-            formMessageEl.textContent = 'Please correct the errors highlighted and resubmit the form.';
+            formMessageEl.textContent = 'Please correct the errors highlighted and try it again.';
             formMessageEl.className = 'summary-message error-message';
         }
     });
