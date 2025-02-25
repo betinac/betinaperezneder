@@ -1,0 +1,19 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient spreadMethod="pad" y2="0.76642" x2="0.73438" y1="0.17267" x1="0.23047" id="svg_5">
+   <stop offset="0" stop-color="#ff7f00"/>
+   <stop offset="1" stop-color="#0080ff"/>
+  </linearGradient>
+  <linearGradient spreadMethod="pad" y2="0.23358" x2="0.26563" y1="0.82733" x1="0.76953" id="svg_19">
+   <stop offset="0" stop-color="#ff7f00"/>
+   <stop offset="1" stop-color="#0080ff"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g stroke="null" id="svg_18">
+   <path stroke="#7f3f00" id="svg_17" d="m251.9521,293.67969c-102.36892,29.65017 47.19461,-35.64834 18.00197,-112.18164c-29.19264,-76.53331 -226.04825,-135.21875 -123.67933,-164.86892c102.3689,-29.65017 208.93376,8.32516 238.12641,84.85847c29.19264,76.53331 -30.08014,162.54193 -132.44904,192.1921z" opacity="undefined" stroke-dasharray="2,2" stroke-width="0" fill="url(#svg_5)"/>
+   <path stroke="#7f3f00" id="svg_8" d="m115.74323,113.42928c94.31678,-45.62599 -38.8208,42.63495 6.10114,113.14829c44.92194,70.51334 250.83305,96.48402 156.51627,142.11001c-94.31676,45.62598 -207.10011,25.46723 -252.02205,-45.04611c-44.92194,-70.51334 -4.91212,-164.58621 89.40464,-210.21219z" opacity="undefined" stroke-dasharray="2,2" stroke-width="0" fill="url(#svg_19)"/>
+  </g>
+ </g>
+</svg>
