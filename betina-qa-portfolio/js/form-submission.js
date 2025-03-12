@@ -63,12 +63,19 @@ function formSubmission() {
           document.getElementById('emailError').textContent = 'Please enter a valid email address.';
         } else {
           /* Check for disallowed email domains */
-          const disallowedDomains = ['mailinator.com', 'dispostable.com', 'tempmail.com', '10minutemail.com', 'guerrillamail.com', 'example.com'];
+          const disallowedDomains = ['mailinator.com', 'dispostable.com', 'tempmail.com', '10minutemail.com', 'guerrillamail.com', 'example.com', 'do-not-respond.me', 'mail.ru'];
           const emailDomain = emailValue.split('@')[1].toLowerCase();
           if (disallowedDomains.includes(emailDomain)) {
             isValid = false;
             email.classList.add('error');
             document.getElementById('emailError').textContent = 'That email domain is not allowed.';
+          }
+
+          const disallowedEmails = ['ocopesuq299@gmail.com', 'friedenspfeifen@omggreatfoods.com', 'aferinohis056@gmail.com'];
+          if (disallowedEmails.includes(emailValue)) {
+            isValid = false;
+            email.classList.add('error');
+            document.getElementById('emailError').textContent = 'That email is not allowed.';
           }
         }
     
