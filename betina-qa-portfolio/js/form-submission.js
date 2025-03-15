@@ -38,21 +38,47 @@ function formSubmission() {
           firstName.classList.add('error');
           document.getElementById('firstNameError').textContent = 'Please enter at least 2 characters.';
         }
+
         if (firstName.value.trim().length > 50) {
           isValid = false;
           firstName.classList.add('error');
           document.getElementById('firstNameError').textContent = 'First name must be less than 50 characters.';
         }
-    
+        
+        const firstNameValue = firstName.value.trim().toLowerCase();
+        const disallowedFirstName = ['faf'];
+        if (firstNameValue.includes(disallowedFirstName)) {
+          isValid = false;
+          email.classList.add('error');
+          document.getElementById('emailError').textContent = 'Please enter valid information.';
+        }
+        
         if (lastName.value.trim().length < 2) {
           isValid = false;
           lastName.classList.add('error');
           document.getElementById('lastNameError').textContent = 'Please enter at least 2 characters.';
         }
+
         if (lastName.value.trim().length > 50) {
           isValid = false;
           lastName.classList.add('error');
           document.getElementById('lastNameError').textContent = 'Last name must be less than 50 characters.';
+        }
+
+        const lastNameValue = lastName.value.trim().toLowerCase();
+        const disallowedLastName = ['faf'];
+        if (lastNameValue.includes(disallowedLastName)) {
+          isValid = false;
+          email.classList.add('error');
+          document.getElementById('emailError').textContent = 'Please enter valid information.';
+        }
+
+        const companyValue = company.value.trim().toLowerCase();
+        const disallowedCompany = ['google'];
+        if (companyValue.includes(disallowedCompany)) {
+          isValid = false;
+          email.classList.add('error');
+          document.getElementById('emailError').textContent = 'Please enter valid information.';
         }
 
         const emailValue = email.value.trim();
