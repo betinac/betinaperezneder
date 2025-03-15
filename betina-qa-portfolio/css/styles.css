@@ -183,7 +183,7 @@ body {
     width: 100%;
 }
 
-.hero-text h1 .part-roboto {
+.hero-text .hero-h1 .part-roboto {
     font-family: var(--body-title-font);
     font-style: italic;
     font-weight: lighter;
@@ -191,7 +191,7 @@ body {
     color: var(--text-color);
 }
 
-.hero-text h1 .part-island {
+.hero-text .hero-h1 .part-island {
     font-family: var(--title-font);
     font-size: clamp(12rem, 6.6rem + 12vw, 18rem);
     font-style: normal;
@@ -329,9 +329,9 @@ body {
     padding: 1.8rem;
 }
 
-.services-text h1,
-.hire-me-text h1,
-.linkedin-rec-text h1 {
+.services-text .services-h1,
+.hire-me-text .hire-h1,
+.linkedin-rec-text .linkedin-h1 {
     display: flex;
     font-size: 3rem;
     margin-bottom: 0.5rem;
@@ -340,12 +340,12 @@ body {
     text-align: center;
 }
 
-.services-text h1::before,
-h1::after,
-.hire-me-text h1::before,
-h1::after,
-.linkedin-rec-text h1::before,
-h1::after {
+.services-text .services-h1::before,
+.services-h1::after,
+.hire-me-text .hire-h1::before,
+.hire-h1::after,
+.linkedin-rec-text .linkedin-h1::before,
+.linkedin-h1::after {
     content: "";
     flex: 1;
     border-top: 2px solid var(--accent);
@@ -934,7 +934,7 @@ iframe {
     margin-bottom: 2rem;
 }
 
-.contact-intro h1 {
+.contact-intro .contact-h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--cform-title);
@@ -1045,7 +1045,7 @@ textarea.error {
     color: var(--social-text);
 }
 
-.social-left h1 {
+.social-left .social-h1 {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
     margin-bottom: 0.5rem;
 }
@@ -1127,7 +1127,7 @@ textarea.error {
     justify-content: flex-start;
 }
 
-.certification-logo h1 {
+.certification-logo .certification-h1 {
     font-size: clamp(1rem, 3vw, 2rem);
     text-wrap-mode: nowrap;
 }
@@ -1206,7 +1206,7 @@ footer {
         margin: 0 auto;
     }
 
-    .hero-text h1 .part-island {
+    .hero-text .hero-h1 .part-island {
         font-size: clamp(9.5rem, 16vw, 10rem);
     }
 
@@ -1244,9 +1244,9 @@ footer {
         flex: 1 1 calc(50% - 40px);
     }
 
-    .services-text h1,
-    .hire-me-text h1,
-    .linkedin-rec-text h1 {
+    .services-text .services-h1,
+    .hire-me-text .hire-h1,
+    .linkedin-rec-text .linkedin-h1 {
         font-size: clamp(2rem, 5vw, 2.5rem);
     }
 
@@ -1322,7 +1322,7 @@ footer {
         gap: 0.5rem;
     }
 
-    .certification-logo h1 {
+    .certification-logo .certification-h1 {
         font-size: 1.5rem;
         margin: 0;
     }
@@ -1335,7 +1335,7 @@ footer {
 }
 
 @media screen and (max-width: 550px) {
-    .contact-intro h1 .contact-break-last {
+    .contact-intro .contact-h1 .contact-break-last {
         display: inline-block;
     }
 }
@@ -1355,7 +1355,7 @@ footer {
         display: none;
     }
 
-    .hero-text h1{
+    .hero-text .hero-h1{
         line-height: 5rem;
     }
 
@@ -1369,9 +1369,9 @@ footer {
         line-height: 2.5rem;
     }
 
-    .services-text h1,
-    .hire-me-text h1,
-    .linkedin-rec-text h1 {
+    .services-text .services-h1,
+    .hire-me-text .hire-h1,
+    .linkedin-rec-text .linkedin-h1 {
         font-size: clamp(1.7rem, 5vw, 2rem);
     }
 
@@ -1416,7 +1416,7 @@ footer {
         font-size: 14px;
     }
 
-    .contact-intro h1 {
+    .contact-intro .contact-h1 {
         font-size: clamp(1.7rem, 2vw, 2rem);
         margin-bottom: 0;
     }    
@@ -1462,9 +1462,9 @@ footer {
         height: 230px;
     }
 
-    .services-text h1,
-    .hire-me-text h1,
-    .linkedin-rec-text h1 {
+    .services-text .services-h1,
+    .hire-me-text .hire-h1,
+    .linkedin-rec-text .linkedin-h1 {
         font-size: clamp(1.7rem, 5vw, 2rem);
     }
 
@@ -1487,7 +1487,7 @@ footer {
         padding-bottom: 1rem;
     }
 
-    .contact-intro h1 {
+    .contact-intro .contact-h1 {
         font-size: clamp(1.7rem, 2vw, 2rem);
         margin-bottom: 0;
     } 
