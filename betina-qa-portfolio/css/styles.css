@@ -183,7 +183,7 @@ body {
     width: 100%;
 }
 
-.hero-text .hero-h1 .part-roboto {
+.hero-text h1 .part-roboto {
     font-family: var(--body-title-font);
     font-style: italic;
     font-weight: lighter;
@@ -191,7 +191,7 @@ body {
     color: var(--text-color);
 }
 
-.hero-text .hero-h1 .part-island {
+.hero-text h1 .part-island {
     font-family: var(--title-font);
     font-size: clamp(12rem, 6.6rem + 12vw, 18rem);
     font-style: normal;
@@ -1206,7 +1206,7 @@ footer {
         margin: 0 auto;
     }
 
-    .hero-text .hero-h1 .part-island {
+    .hero-text h1 .part-island {
         font-size: clamp(9.5rem, 16vw, 10rem);
     }
 
@@ -1355,7 +1355,7 @@ footer {
         display: none;
     }
 
-    .hero-text .hero-h1{
+    .hero-text h1{
         line-height: 5rem;
     }
 
