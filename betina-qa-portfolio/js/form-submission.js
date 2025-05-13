@@ -3,24 +3,29 @@ function formSubmission() {
     const form = document.getElementById('contactForm');
     const formMessageEl = document.getElementById('formMessage');
     const loadingMessageEl = document.getElementById('loadingMessage');
-    const submitButton = form.querySelector('button[type="submit"]');
 
     if (!form) {
-        console.error("No form with id 'contactForm' found.");
-        return;
+      console.debug("No contact form on this page.");
+      return;
     }
+
+    if (form.dataset.listenerAttached === 'true') return;
+
+    form.dataset.listenerAttached = 'true';
+
+    const submitButton = form.querySelector('button[type="submit"]');
 
     form.addEventListener('submit', function (event) {
         /* Avoid submitting the form automatically */
         event.preventDefault();
-        
+
         /* Clear previous error messages and styles */
         const errorMessages = document.querySelectorAll('.error-message');
         errorMessages.forEach(el => el.textContent = '');
         const inputs = this.querySelectorAll('input, textarea');
         inputs.forEach(input => input.classList.remove('error'));
         formMessageEl.textContent = '';
-    
+
         loadingMessageEl.style.display = 'block';
         loadingMessageEl.className = 'summary-message';
         submitButton.disabled = true;
@@ -30,9 +35,9 @@ function formSubmission() {
         const email = document.getElementById('email');
         const company = document.getElementById('company');
         const message = document.getElementById('message');
-    
+
         let isValid = true;
-    
+
         if (firstName.value.trim().length < 2) {
           isValid = false;
           firstName.classList.add('error');
@@ -44,7 +49,7 @@ function formSubmission() {
           firstName.classList.add('error');
           document.getElementById('firstNameError').textContent = 'First name must be less than 50 characters.';
         }
-        
+
         const firstNameValue = firstName.value.trim().toLowerCase();
         const disallowedFirstName = ['faf'];
         if (firstNameValue.includes(disallowedFirstName)) {
@@ -52,7 +57,7 @@ function formSubmission() {
           email.classList.add('error');
           document.getElementById('emailError').textContent = 'Please enter valid information.';
         }
-        
+
         if (lastName.value.trim().length < 2) {
           isValid = false;
           lastName.classList.add('error');
@@ -104,13 +109,13 @@ function formSubmission() {
             document.getElementById('emailError').textContent = 'That email is not allowed.';
           }
         }
-    
+
         if (company.value.trim().length > 100) {
           isValid = false;
           company.classList.add('error');
           document.getElementById('companyError').textContent = 'Company name must be less than 100 characters.';
         }
-    
+
         if (message.value.trim().length === 0) {
           isValid = false;
           message.classList.add('error');
@@ -122,11 +127,11 @@ function formSubmission() {
           message.classList.add('error');
           document.getElementById('messageError').textContent = 'Message must be less than 1000 characters.';
         }
-    
+
         /* Show a confirmation or error message */
         if (isValid) {
             const formData = new FormData(form);
-            
+
             fetch(form.action, {
                 method: 'POST',
                 body: formData
