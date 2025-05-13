@@ -1,0 +1,71 @@
+<div id="contactModal" class="modal modal-hidden contact-section">
+    <div class="modal-content">
+        <span class="closeCF" id="closeCFModal">&times;</span>
+        <div class="contact-intro">
+            <div class="contact-h1">How can I help your business succeed? <span class="contact-break-last">Let's Chat.</span></div>
+            <p class="contact-subheadline">
+                Send me a quick message and I'll get back to you. I respond to all inquiries within the day.
+            </p>
+        </div>
+
+        <form id="contactForm" name="contactForm" class="contact-form"
+            action="https://fragrant-term-4674.betinaperez.workers.dev/" method="POST" novalidate>
+            <div class="cf-form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="What's your First Name?"
+                        required minlength="2" maxlength="50">
+                    <span class="error-message" id="firstNameError" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="What's your Last Name?"
+                        required minlength="2" maxlength="50">
+                    <span class="error-message" id="lastNameError" aria-live="polite"></span>
+                </div>
+            </div>
+            <div class="cf-form-row">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="What's your Email?" required
+                        maxlength="100">
+                    <span class="error-message" id="emailError" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company (Optional)</label>
+                    <input type="text" id="company" name="company" placeholder="Where do you work?"
+                        maxlength="100">
+                    <span class="error-message" id="companyError" aria-live="polite"></span>
+                </div>
+            </div>
+            <div class="cf-form-row">
+                <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"
+                        placeholder="Please leave a message."
+                        required maxlength="1000"></textarea>
+                    <span class="error-message" id="messageError" aria-live="polite"></span>
+                </div>
+            </div>
+            <div class="cf-form-row checkboxes">
+                <div class="form-group">
+                    <input type="checkbox" id="consulting" name="consulting" value="Expert Consulting">
+                    <label for="consulting">I need expert consulting services (Optional)</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="learnMore" name="learnMore" value="Learn More">
+                    <label for="learnMore">I'd like to learn more about your services (Optional)</label>
+                </div>
+            </div>
+            <div class="cf-form-row submit-row">
+                <button type="submit" class="cta-button cta-get-in-touch">
+                    <i class="fa-solid fa-envelope fa-beat" style="--fa-beat-scale: 1.2;"></i> Get in Touch
+                </button>
+            </div>
+        </form>
+        <div id="loadingMessage" role="status" aria-live="assertive" style="display: none;">
+            <i class="fa-solid fa-spinner fa-spin"></i> Processing your submission, please wait ...
+        </div>
+        <div id="formMessage" aria-live="polite"></div>
+    </div>
+</div>
